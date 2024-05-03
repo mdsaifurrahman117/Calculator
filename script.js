@@ -1,15 +1,29 @@
 // alert ("Welcome to the JavaScript calculator")
 
-function add_value(value) {
-            document.getElementById("result").value += value;
+let currentInput = '';
+
+function add_value(num) {
+            currentInput += num;
+            document.getElementById('result').value = currentInput;
+            // console.log(currentInput);
+}
+
+function add_operator(operator) {
+            if (currentInput !== '') {
+                        currentInput += operator;
+                        document.getElementById('result').value = currentInput;
+            }
 }
 
 function clear_result() {
-            document.getElementById("result").value = " " ;
+            currentInput = '';
+            document.getElementById('result').value = ' ';
 }
 
-function calculate() {
-            let number = document.getElementById("result").value;
-            let result = eval(number);
-            document.getElementById("result").value = result;
+function calculate_result() {
+            if (currentInput !== '') {
+                        let result = eval(currentInput);
+                        document.getElementById('result').value = result;
+                        currentInput = result.toString();
+            }
 }
