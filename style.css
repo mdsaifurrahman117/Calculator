@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 :root {
-            --background: #F5F5F5;
-            --button-bg: #fff;
+            --background: #d3cdcd;
+            --button-bg: #e5e4e0;
             --operator : #FF8361;
             --text-color : #000;
 }
@@ -34,43 +34,85 @@ ul li {
             font-family: 'Poppins', sans-serif;
             font-weight: 400;
 }
+span {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            color: #fff;
+}
 button {
             background: var(--button-bg);
             border: none;
-            width: 50px;
+            width: 80px;
             height: 50px;
             font-family: 'Poppins', sans-serif;
-            font-size: 18px;
+            box-shadow: 0px 3px 0px 0px #7e7e7e;
+            font-size: 20px;
             font-weight: 700;
-            color: var(--operator);
+            color: var(--text-color);
             border-radius: 5px;
+            cursor: pointer;
+            transition: 0.5s;
+}
+.theme-1 {
+            background: #3b4664;
+}
+.header-light {
+            color: #fff;
 }
 .box {
-            max-width: 300px;
+            max-width: 420px;
             margin: 50px auto;
             text-align: center;
-            box-shadow: 0px 0px 10px 1px #ddd;
+            /* box-shadow: 0px 0px 10px 1px #ddd; */
             border-radius: 10px;
 }
 .result {
-            padding: 25px 0px;
+            /* padding: 25px 0px; */
+            margin: 20px 0px;
 }
 .result input {
+            text-align: right;
+            background: #eeeeee;
             font-family: 'Poppins', sans-serif;
-            font-weight: 500;
+            font-size: 20px;
+            font-weight: 700;
             border: none;
-            background: none;
             padding: 0px 25px;
+            border-radius: 8px;
             height: 80px;
-            width: 85%;
+            width: 100%;
 }
 .keypad {
             background: var(--background);
-            border-radius: 15px;
+            border-radius: 8px;
             padding: 25px 0px;
 }
 .number {
             color: var(--text-color);
+}
+.number:hover {
+            background: #ffff;
+}
+.operator:hover {
+            background: #fff;
+}
+.end-row button {
+            width: 160px;
+}
+.reset {
+            background: #62b5bd;
+            color: #fff;
+}
+.reset:hover {
+            cursor: pointer;
+}
+.res {
+            background: #ff8b38;
+            color: #fff;
+}
+.theme {
+            background: #3b3b3b;
 }
 footer {
             padding: 20px 0px;
@@ -78,3 +120,60 @@ footer {
 footer a {
             color: var(--text-color);
 }
+
+
+/* From Uiverse.io by guilhermeyohan */ 
+.checkbox-apple {
+            position: relative;
+            width: 50px;
+            height: 25px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+/* theme-1 */
+          .checkbox-apple label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 25px;
+            border-radius: 50px;
+            background: #181f32;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          
+          .checkbox-apple label:after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+          }
+/* theme-2 */
+          .checkbox-apple input[type="checkbox"]:checked + label {
+            background: #d3cdcd;
+          }
+          
+          .checkbox-apple input[type="checkbox"]:checked + label:after {
+            transform: translateX(25px);
+          }
+          
+          .checkbox-apple label:hover:after {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+          }
+          
+          .yep {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 25px;
+          }
